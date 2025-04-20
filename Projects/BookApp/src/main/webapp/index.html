@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Book App HTTPServlet with Database</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    section {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h1, h2 {
+      margin: 0 0 20px;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #555;
+      display: block;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="file"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 100%;
+    }
+
+    button {
+      background-color: #e27d60;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #cf6a4c;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h1>Book App</h1>
+    <hr />
+	<hr>
+	<a href="search.html">Search Book</a>
+	<hr>
+    <h2>Add a New Book</h2>
+    <form action="AddBook">
+      <div>
+        <label>Name:</label>
+        <input type="text" name="name" required />
+      </div>
+
+      <div>
+        <label>Author Name:</label>
+        <input type="text" name="aname" />
+      </div>
+
+      <div>
+        <label>Publisher Name:</label>
+        <input type="text" name="pname" />
+      </div>
+
+      <div>
+        <label>Price:</label>
+        <input type="number" name="price" required />
+      </div>
+
+      <div>
+        <label>Content (PDF):</label>
+        <input type="file" accept=".pdf" name="content" />
+      </div>
+
+      <div>
+        <label>Image:</label>
+        <input type="file" accept=".jpg,.png,.jpeg" name="image" />
+      </div>
+
+      <button type="submit">Send to Database</button>
+    </form>
+    
+    
+    
+    
+  </section>
+</body>
+</html>
