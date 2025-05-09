@@ -1,8 +1,8 @@
-# Project to create a table in MySQL 
-# using Hibernate without using the 
+# Project to create a table in MySQL
+# using Hibernate without using the
 # JDBC connection
 
-1. Dependencies Added 
+1. Add Dependencies to the pom.xml for MySQL and Hibernate framework.
     <!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
 	<dependency>
 	    <groupId>com.mysql</groupId>
@@ -17,8 +17,15 @@
     	<version>6.6.0.Final</version>
    	</dependency>
 
-2. XML File for configuration created
+2. Create the configuration XML File in the source folder which contains the information regarding the 
+database to which we have to map:-
+
+In the folder src/main/java -> Right Click -> New -> Other -> XML File
+
 <?xml version="1.0" encoding="UTF-8"?>
+
+3. In the browser type Hybernate DTD get the hibernate dtd file and paste the content 
+to XML File.
 
 <!DOCTYPE hibernate-configuration PUBLIC
 	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
@@ -42,13 +49,21 @@
     </session-factory>
 </hibernate-configuration>
 
-3. Add getter and setter method in the Book.java file.
+3. Add members to the Book.java file these are the members which will be the column name in 
+   the database and create getter and setter methods in the Book.java file.
+
+Description of the Hibernate Annotations:-
+3.1. @Entity is for Table Name. 
+	Compulsary annotation
+	
+3.2. @Id is for the Primary Key in the Table.
+	Optional annotation
 
 4. Add the main code in the App.java file.
-
-
 
 5. Download the file from google hibernate-configuration-3.0.dtd and add the doctype tag to 
    the XML File created.
 
-
+Hibernate itself creates the tables in the Database using class object mapping without using 
+the SQL query. It is not the only one but it is most famous ORM (Object Relation Mapping) based 
+application.
