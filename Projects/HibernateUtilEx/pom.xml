@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+  <!-- Define Maven project structure and coordinates -->
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- Unique identifier for the project group -->
+  <groupId>com.rohit.hibernate</groupId>
+  
+  <!-- Project/module name -->
+  <artifactId>HibernateUtilEx</artifactId>
+  
+  <!-- Project version -->
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <!-- Type of build artifact (jar, war, etc.) -->
+  <packaging>jar</packaging>
+
+  <!-- Human-readable project name -->
+  <name>HibernateUtilEx</name>
+  
+  <!-- Project website or reference URL -->
+  <url>http://maven.apache.org</url>
+
+  <!-- Global project properties -->
+  <properties>
+    <!-- Character encoding used for source files -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <!-- List of external libraries used in the project -->
+  <dependencies>
+  
+    <!-- JUnit library for unit testing -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <!-- MySQL JDBC driver for database connectivity -->
+	<dependency>
+	    <groupId>com.mysql</groupId>
+	    <artifactId>mysql-connector-j</artifactId>
+	    <version>8.4.0</version>
+	</dependency>
+	
+	<!-- Hibernate core library for ORM support -->
+    <dependency>
+    	<groupId>org.hibernate.orm</groupId>
+    	<artifactId>hibernate-core</artifactId>
+    	<version>6.6.0.Final</version>
+   	</dependency>
+   	
+  </dependencies>
+</project>
